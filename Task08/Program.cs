@@ -7,8 +7,11 @@ int count = 1;
  
 while (count <= number) 
 { 
-    if (count % 2 == 0) 
-    count++; 
-    Console.Write($"{number} -> {count}");
+    if (count % 2 == 0)
+    {
+        Console.Write($"{number} -> {count}");
+        count++; 
+    }
+    else return; 
 }
 
