@@ -27,15 +27,18 @@ void PrintMatrix(int[,] matrix)
     }
 }
 
+double[] arr = new double[matrix.GetLength(1)]; 
 for (int j = 0; j < matrix.GetLength(1); j++)
 {
-    double sum = 0; 
-    for (int j = 0; j < matrix.GetLength(1); j++)
+    int sum = 0; 
+    for (int i = 0; i < matr.GetLength(0); i++)
         {
-            sum += matrix[i, j]; 
+            sum += matr[i, j]; 
         }
-        Console.WriteLine($"Среднее арифметическое элементов {sum}"); 
+    arr[j] = sum / matr.GetLength(0);   
+     Console.WriteLine($"Среднее арифметическое элементов {sum}"); 
 }
+//return arr;
 
 int[,] array2d = CreateMatrixRndInt(3, 4, -100, 100); 
 PrintMatrix(array2d);
